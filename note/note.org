@@ -1,0 +1,98 @@
+
+
+* CDLaTeX
+** 安装
+   - elpa包中安装
+** 配置
+   - 新建init-cdlatex.el
+   - 在其中加入(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)，这样在auctex的emacs中启动tex文件，将自动开启cdlatex
+   - 在init.el中加入(require 'init-cdlatex)，使之生效
+   - 手动启动cdlatex的方式为M-x cdlatex-mode RET
+** 使用
+*** 插入环境模板
+    - 用简写来插入latex环境，用tab键激活。如env<TAB>，然后输入doc<TAB>，补全为document，回车，将插入\begin{document}\end{document}。
+    - 用C-c ?，来查询环境的简写
+    - C-c { 也是插入环境，配合refTeX，可以生成序号
+    - 在数学环境中，输入简写，将插入数学模板，且光标的位置合理，用<TAB>键跳转位置，比如输入fr<TAB>。
+*** 插入数学符号
+    - 用`来插入希腊字符等数学符号
+    - `，``，```，表示3级，每一级对应不同的字符
+    - 只输入`或几个`，会激活对照表，帮助记忆，如果输入`后很快输入其他字符，则不会弹出对照表
+    - 如果屏幕中不能完成显示对照表，可以去.emacs.d/elpa/cdlatex.../cdlatex.el中最后部分查看
+*** 字体修饰
+    - 用'来插入字体修饰
+    - 数学模式和文本模式下有一些区别
+    - 字体修饰有指定字体、强调、点号等
+*** 括号对
+    - 输入$、[、{都会自动补齐对应的“括号”
+    - 光标位置位于中间，用<TAB>键跳转位置
+** 说明
+   - C-c - :须配合RefTeX使用
+   - 定位：作为auctex的增强
+* AucTeX
+** 安装
+*** 用elpa包安装
+    - 启动包管理器
+    - 选择安装、完成安装、完成。
+*** 用下载的版本安装
+    - 未实验成功
+    - 据目前的了解来看，不应该在.emacs.d文件夹下解压缩，然后configure
+    - 应该在其他地方解压缩，然后安装程序会将相关文件复制到.emacs.d文件夹下
+    - 必须先安装texlive，否则不能configure
+
+** 配置
+   - 在init.el文件的custom-varible下面加入tex-engine，设为xetex
+   - 在init-auctex.el文件中加入其他配置
+
+** TODO 
+   - 希望将tex-engine的配置放在init-auctex.el文件中
+   - xelatex的问题
+
+** 使用
+   - C-c C-c编译
+   - C-c C-c预览
+
+* RefTeX
+** 配置
+   - 新建init-reftex.el文件，置于lisp文件夹中
+   - 在文件中加入自动启动reftex的脚本
+   - 在init.el文件中加载init-reftex.el
+** 使用
+   - 配合auctex和cdlatex，为其相应的环境生成ref
+
+* Yasnippet
+** 安装
+   - 使用elpa安装
+   - 无需设置load-path等
+
+** 配置
+   - 新建init-yasnippet.el文件，置于lisp文件中
+   - 在文件中加入启动脚本和配置脚本
+   - 在init.el文件中加载init-yasnippet.el
+   - capitaomorte.github.io
+
+** 使用
+*** 简介
+   - yasnippet作为minor mode，根据加载的文件自动切换相应的mode
+   - 主要作用为通过几个字符+<TAB>的方式，自动插入代码，如latex的导言区
+
+*** 设置
+    
+
+
+* Evil
+** 安装
+   - elpa包安装
+   - 会自动安装undo tree和 goto 
+
+** 配置
+   - 在init-evil.el文件中加入配置信息，在init.el文件中加载
+   - 配置自动启动evil模式
+   - 配置退出编辑模式的快捷键jk
+
+** 使用
+   - M-x evil-mode退出evil模式
+   - 常用快捷键与vim基本一致
+   - 在陈斌的配置中，使用了leader和对ex模式进行了emacs化的定制，留待进一步研究
+
+
