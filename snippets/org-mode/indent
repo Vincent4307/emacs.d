@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: indent
+# key: indent
+# --
+
+#+STARTUP: indent
