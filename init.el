@@ -37,16 +37,19 @@
  ;; If there is more than one, they won't work right.
  )
 
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+
 (require 'init-ido)
 (require 'init-smex)
 (require 'init-set-fonts)
 (require 'init-set-org)
 (require 'init-set-keymap)
-(require 'init-autocomplete)
+;(require 'init-autocomplete)
 
-(require 'init-latex-auctex)
-(require 'init-latex-cdlatex)
-(require 'init-latex-reftex)
+;(require 'init-latex-auctex)
+;(require 'init-latex-cdlatex)
+;(require 'init-latex-reftex)
 
 (require 'init-yasnippet)
 
