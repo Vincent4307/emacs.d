@@ -23,9 +23,9 @@
 
 (setq package-archives '(
                          ("gnu" . "http://elpa.gnu.org/packages/")
-                         ; ("marmalade" . "http://marmalade-repo.org/packages/")
+;                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("popkit" . "http://elpa.popkit.org/packages/")
-                         ;("melpa" . "http://melpa.milkbox.net/packages/")
+;                         ("melpa" . "http://melpa.milkbox.net/packages/")
                          ))
 
 
@@ -45,11 +45,11 @@
 (require 'init-set-fonts)
 (require 'init-set-org)
 (require 'init-set-keymap)
-;(require 'init-autocomplete)
+(require 'init-autocomplete)
 
-;(require 'init-latex-auctex)
-;(require 'init-latex-cdlatex)
-;(require 'init-latex-reftex)
+(require 'init-latex-auctex)
+(require 'init-latex-cdlatex)
+(require 'init-latex-reftex)
 
 (require 'init-yasnippet)
 
