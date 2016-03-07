@@ -1,4 +1,6 @@
 
+#+STARTUP: indent
+
 
 * CDLaTeX
 ** 安装
@@ -39,6 +41,21 @@
     - 据目前的了解来看，不应该在.emacs.d文件夹下解压缩，然后configure
     - 应该在其他地方解压缩，然后安装程序会将相关文件复制到.emacs.d文件夹下
     - 必须先安装texlive，否则不能configure
+*** mac上安装
+1. 首先安装mactex,设置环境变量
+   export PATH=/usr/local/texlive/2015/bin/x86_64-darwin:$PATH
+   export MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man:$MANPATH
+   export INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/man:$INFOPATH
+2. 然后安装emacs
+3. 然后下载发行版，解压到home，进入目录
+4. ./configure 
+   --with-emacs=/Applications/Emacs.app/Contents/MacOS/Emacs 
+   --with-lispdir=/Applications/Emacs.app/Contents/Resources/site-lisp 
+   --with-texmf-dir=/usr/local/texlive/texmf-local
+5. make
+6. sudo make install
+7. 修改emacs配置文件,关键是要将让emacs能找到texlive的路径
+8. 这一路径是/Library/TeX/texbin，而不是之前的path
 
 ** 配置
    - 在init.el文件的custom-varible下面加入tex-engine，设为xetex
@@ -83,6 +100,7 @@
 * Evil
 ** 安装
    - elpa包安装
+   - 安装evil和evil-escape
    - 会自动安装undo tree和 goto 
 
 ** 配置
