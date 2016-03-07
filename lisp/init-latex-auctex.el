@@ -1,5 +1,9 @@
 
+ (setenv "PATH" (concat "/Library/TeX/texbin:/usr/local/bin:" (getenv "PATH")))
+ (setq exec-path (append '("/Library/TeX/texbin" "/usr/local/bin") exec-path))
+
 (load "auctex.el" nil t t)
+(load "preview.el" nil t t)
 
 (setq Tex-auto-save t)
 (setq Tex-parse-self t)

@@ -21,6 +21,12 @@
 ;;set no backup
  (setq-default make-backup-files nil)
 
+
+; (setenv "PATH" (concat (getenv "PATH") "/usr/local/texlive/2015/bin/x86_64-darwin/" ))
+; (setq exec-path (append exec-path '("/usr/local/texlive/2015/bin/x86_64-darwin/") ))
+;(load "auctex.el" nil t t)
+;(load "preview-latex.el" nil t t)
+
 (setq package-archives '(
                          ("gnu" . "http://elpa.gnu.org/packages/")
 ;                          ("marmalade" . "http://marmalade-repo.org/packages/")
