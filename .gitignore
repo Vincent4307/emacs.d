@@ -4,3 +4,7 @@ bookmarks
 ido.last
 ac-comphist.dat
 smex-items
+lisp/init-set-fonts-formac.el
+lisp/init-set-fonts-forwin.el
+lisp/init-set-fonts-forubuntu.el
+lisp/init-set-fonts.el
