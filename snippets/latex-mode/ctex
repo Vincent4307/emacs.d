@@ -4,6 +4,9 @@
 # --
 \documentclass[UTF8]{ctexart}
 \usepackage{amsmath}
+\usepackage{geometry}
+
+\geometry{a6paper,margin=0.2in}
 
 \begin{document}
 $0
