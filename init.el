@@ -21,7 +21,7 @@
     ("968470c4d15c4988a924930abaf18c0bd3e6703f1918af816d51bd43ee7f17e6" default)))
  '(org-agenda-files
    (quote
-    ("~/Org/study/Cadence.org" "~/Org/study/book.org" "~/Org/study/pcb.org" "~/Org/home/home.org" "~/Org/todo.org" "~/book.org" "~/todo.org" "~/pcb.org" "~/home.org"))))
+    ("~/Org/study/Cadence.org" "~/Org/study/book.org" "~/Org/study/pcb.org" "~/Org/home/home.org" "~/Org/todo.org"))))
 
 ;;set no backup
  (setq-default make-backup-files nil)
