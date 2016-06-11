@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: caption_image
+# key: capi
+# --
+
+#+CAPTION: $0
+#+NAME: fig:
